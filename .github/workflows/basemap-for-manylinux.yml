@@ -44,7 +44,7 @@ jobs:
     steps:
       -
         name: Download checkout
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: checkout
           path: .
@@ -86,7 +86,7 @@ jobs:
     steps:
       -
         name: Download checkout
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: checkout
           path: .
@@ -137,13 +137,13 @@ jobs:
     steps:
       -
         name: Download checkout
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: checkout
           path: .
       -
         name: Download GEOS artifacts
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: artifacts-geos-${{ matrix.arch }}
           path: ${{ env.PKGDIR }}/extern
@@ -192,13 +192,13 @@ jobs:
     steps:
       -
         name: Download GEOS artifacts
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: artifacts-geos-${{ matrix.arch }}
           path: ${{ env.PKGDIR }}/extern
       -
         name: Download build artifacts
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: artifacts-build-${{ matrix.arch }}-${{ matrix.python-version }}
           path: ${{ env.PKGDIR }}/dist
@@ -244,13 +244,13 @@ jobs:
     steps:
       -
         name: Download checkout
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: checkout
           path: .
       -
         name: Download build artifacts
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: artifacts-build-${{ matrix.arch }}-${{ matrix.python-version }}
           path: ${{ env.PKGDIR }}/dist
@@ -294,7 +294,7 @@ jobs:
     steps:
       -
         name: Download build artifacts
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: artifacts-build-${{ matrix.arch }}-${{ matrix.python-version }}
           path: ${{ env.PKGDIR }}/dist
